@@ -1,0 +1,29 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches:
+      - main  # ganti sesuai branch kamu
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          script: |
+            cd /var/www/nama-project   # sesuaikan path project kamu
+            git pull origin main
+            # tambahkan perintah sesuai tech stack:
+            # PHP murni  → tidak perlu tambahan
+            # Laravel    → composer install && php artisan migrate
+            # Node.js    → npm install && pm2 restart app
+            # Python     → pip install -r requirements.txt
