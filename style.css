@@ -1,0 +1,241 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins,sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+    color:#333;
+}
+
+/* Navbar */
+
+header{
+    background:linear-gradient(135deg,#0f172a,#2563eb);
+    color:white;
+    min-height:100vh;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+}
+
+nav h2{
+    font-size:32px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav li{
+    margin-left:25px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#FFD43B;
+}
+
+.hero{
+    text-align:center;
+    margin-top:120px;
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    width:60%;
+    margin:auto;
+    line-height:30px;
+    margin-bottom:35px;
+}
+
+.btn{
+    background:#FFD43B;
+    color:#222;
+    text-decoration:none;
+    padding:15px 35px;
+    border-radius:50px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:white;
+}
+
+.section{
+    padding:80px 8%;
+}
+
+.section h2{
+    text-align:center;
+    margin-bottom:50px;
+    font-size:40px;
+}
+
+.container{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+
+}
+
+.card{
+
+background:white;
+padding:30px;
+text-align:center;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.card i{
+
+font-size:70px;
+margin-bottom:20px;
+
+}
+
+.card h3{
+
+margin-bottom:10px;
+
+}
+
+.card p{
+
+line-height:28px;
+
+}
+
+/* Icon Colors */
+
+.html{
+color:#E44D26;
+}
+
+.css{
+color:#264de4;
+}
+
+.javascript{
+color:#f0db4f;
+}
+
+.python{
+color:#3776AB;
+}
+
+.java{
+color:#f89820;
+}
+
+.php{
+color:#777BB4;
+}
+
+.react{
+color:#61DBFB;
+}
+
+.vue{
+color:#42b883;
+}
+
+.angular{
+color:#dd1b16;
+}
+
+.laravel{
+color:#FF2D20;
+}
+
+.node{
+color:#3c873a;
+}
+
+.django{
+color:#0C4B33;
+}
+
+.framework{
+background:#eef4ff;
+}
+
+.about{
+
+padding:80px 10%;
+text-align:center;
+
+}
+
+.about h2{
+
+margin-bottom:20px;
+
+}
+
+.about p{
+
+max-width:800px;
+margin:auto;
+line-height:32px;
+
+}
+
+footer{
+
+background:#0f172a;
+color:white;
+text-align:center;
+padding:25px;
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+nav{
+flex-direction:column;
+}
+
+nav ul{
+margin-top:20px;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+.hero p{
+width:90%;
+}
+
+}
